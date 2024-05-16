@@ -11,12 +11,12 @@
 
 import PackageDescription
 
-let sdkVersion = "0.47.0"
+let sdkVersion = "0.48.0"
 
 let package = Package(
     name: "TomTomSDKTelemetryFrameworks",
     defaultLocalization: "en",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v14)],
     products: [ /* products are set later */ ],
     dependencies: [
         .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-core", exact: Version(stringLiteral: sdkVersion)),
@@ -28,7 +28,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKTelemetryConfigProvider", sha: "cd0423c5307d45722b70fac86d3f1a39de31e8fe34a2fa201c58d24803cce794", version: "0.47.0", dependencies: [
+    Module("TomTomSDKTelemetryConfigProvider", sha: "7e058558ff2c8e154ee850f3b57ba0eaed85882e33c846397bb2efb092813a9b", version: "0.48.0", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKTelemetry"),
