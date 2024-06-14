@@ -11,7 +11,7 @@
 
 import PackageDescription
 
-let sdkVersion = "0.50.0"
+let sdkVersion = "0.51.1"
 
 let package = Package(
     name: "TomTomSDKTelemetryFrameworks",
@@ -28,7 +28,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKTelemetryConfigProvider", sha: "4642b7f485f6c6dec39ac80f2dfd248823080540c5494b85bdd66fac871cb4d3", version: "0.50.0", dependencies: [
+    Module("TomTomSDKTelemetryConfigProvider", sha: "9861df94e588bf62d83df369ee3bfb081664d901dc3b7a220505a7adf2cd92a7", version: "0.51.1", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKTelemetry"),
