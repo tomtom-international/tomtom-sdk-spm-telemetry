@@ -6,9 +6,9 @@ The TomTomSDKTelemetryFrameworks package provides default provider for a Telemet
 
 ## Requirements
 
-1. Xcode 14.2+
-1. Swift 5.7+
-1. Deployment target: iOS 13+
+1. Xcode 16.0+
+1. Swift 5+
+1. Deployment target: iOS 14+
 
 ## Installation
 ### Getting access
@@ -25,7 +25,7 @@ The TomTomSDKTelemetryFrameworks package provides default provider for a Telemet
 ### Adding the TomTomSDKTelemetryFrameworks package to your Xcode project
 1. Add a package dependency to your Xcode project:
     1. Ensure you finished the [Getting access](#getting-access) steps.
-    2. Select `File` → `Add Package Dependencies...` (or `File` → `Add Packages...` in Xcode 14).
+    2. Select `File` → `Add Package Dependencies...` (or `File` → `Add Packages...` in Xcode 15).
     3. Enter the next URL in a search field: https://github.com/tomtom-international/tomtom-sdk-spm-telemetry
     4. Set `Dependency Rule` to `Exact Version`.
         > We recommend using the `Exact Version` to have a consistent resolution.
@@ -44,7 +44,7 @@ The TomTomSDKTelemetryFrameworks package provides default provider for a Telemet
 1. Ensure you finished the [Getting access](#getting-access) steps.
 2. Add next line to your package dependencies in the `Package.swift` file:
     ```swift
-    .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-telemetry", exact: "0.70.0")
+    .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-telemetry", exact: "0.71.1")
     ```
     > We recommend using the `exact` version to have a consistent resolution.
 3. Add next required module to your target dependencies in the `Package.swift` file, e.g.:
@@ -55,12 +55,12 @@ The TomTomSDKTelemetryFrameworks package provides default provider for a Telemet
     ```swift
     let package = Package(
         name: "MyLibrary",
-        platforms: [.iOS(.v14)],
+        platforms: [.iOS(.v15)],
         products: [
             .library(name: "MyLibrary", targets: ["MyLibrary"]),
         ],
         dependencies: [
-            .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-telemetry", exact: "0.70.0")
+            .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-telemetry", exact: "0.71.1")
         ],
         targets: [
            .target(name: "MyLibrary", dependencies: [

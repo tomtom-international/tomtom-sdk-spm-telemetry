@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 6.0
 
 // © 2022 TomTom N.V. All rights reserved.
 //
@@ -11,30 +11,28 @@
 
 import PackageDescription
 
-let sdkVersion = "0.70.0"
+let sdkVersion = "0.71.1"
 
 let package = Package(
     name: "TomTomSDKTelemetryFrameworks",
     defaultLocalization: "en",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v15)],
     products: [ /* products are set later */ ],
     dependencies: [
         .package(url: "https://github.com/tomtom-international/tomtom-sdk-spm-core", exact: Version(stringLiteral: sdkVersion)),
         .package(url: "https://github.com/apple/swift-protobuf.git", exact: "1.25.2"),
-        .package(url: "https://github.com/antlr/antlr4.git", exact: "4.13.1"),
     ],
     targets: [ /* targets are set later */ ],
     swiftLanguageVersions: [.v5]
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKTelemetryConfigProvider", sha: "fb4c0853cb768305ea538074c590ab57ed1871e86f61b46cfc7a205b51450bb3", version: "0.70.0", dependencies: [
+    Module("TomTomSDKTelemetryConfigProvider", sha: "62dde543593bffe4db744ce5fa87c72b6d2cc2fe5112ad0834f59dfc030eb4a3", version: "0.71.1", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKTelemetry"),
         .corePackageModule("TomTomSDKRoute"),
         .thirdpartyPackageModule("SwiftProtobuf", package: "swift-protobuf"),
-        .thirdpartyPackageModule("Antlr4", package: "antlr4"),
     ]),
 ]
 
