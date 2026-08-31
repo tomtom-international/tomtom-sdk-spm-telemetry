@@ -11,7 +11,7 @@
 
 import PackageDescription
 
-let sdkVersion = "0.71.3"
+let sdkVersion = "0.73.2"
 
 let package = Package(
     name: "TomTomSDKTelemetryFrameworks",
@@ -27,7 +27,7 @@ let package = Package(
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKTelemetryConfigProvider", sha: "d5e1a1f7d65d0bbd94a366471aaaaf27a991bc03568602b967dbd572bb84100f", version: "0.71.3", dependencies: [
+    Module("TomTomSDKTelemetryConfigProvider", sha: "266d5d83db7957d5a790979bfcc76ab9670df64afd73a20a463092f2151d0f52", version: "0.73.2", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKTelemetry"),
@@ -114,7 +114,7 @@ extension ModuleDependency: ExpressibleByStringLiteral {
         self.init(name: value, package: nil)
     }
 
-    public typealias StringLiteralType = String
+    typealias StringLiteralType = String
 }
 
 extension Array where Element == Module {
