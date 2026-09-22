@@ -11,7 +11,7 @@
 
 import PackageDescription
 
-let sdkVersion = "0.73.2"
+let sdkVersion = "0.74.2"
 
 let package = Package(
     name: "TomTomSDKTelemetryFrameworks",
@@ -23,11 +23,11 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-protobuf.git", exact: "1.25.2"),
     ],
     targets: [ /* targets are set later */ ],
-    swiftLanguageVersions: [.v5]
+    swiftLanguageModes: [.v5]
 )
 
 let modules: [Module] = [
-    Module("TomTomSDKTelemetryConfigProvider", sha: "266d5d83db7957d5a790979bfcc76ab9670df64afd73a20a463092f2151d0f52", version: "0.73.2", dependencies: [
+    Module("TomTomSDKTelemetryConfigProvider", sha: "68bf47dadfbd51009be865172eabedfb746dc1550ab89ca07f992ac6a6961944", version: "0.74.2", dependencies: [
         .corePackageModule("TomTomSDKCommon"),
         .corePackageModule("TomTomSDKLocationProvider"),
         .corePackageModule("TomTomSDKTelemetry"),
